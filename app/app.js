@@ -28,6 +28,14 @@ var App = angular.module('app', ['ui.router']);
 function config($stateProvider, $urlRouterProvider) {
 }
 
+$stateProvider
+	.state('character', {
+		url: '/characters/:name',
+		controller: "CharacterController as characterCtrl",
+		template: require('./views/character.html')
+
+	});
+
 App.config(config);
 
 /*
