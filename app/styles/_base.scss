@@ -3,9 +3,28 @@
   text-decoration: none;
 }
 
+h1 {
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
 p {
   color: #333;
   text-align: center;
   max-width: 500px;
-  margin: 0 auto;
+  margin-left: 28%;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 500px;
+  height: 500px;
+  border: 2px solid black;
+  border-radius: 10px;
+  position: absolute;
 }

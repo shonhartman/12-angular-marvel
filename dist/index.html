@@ -1,0 +1,23 @@
+<<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Routing!</title>
+    <link rel="stylesheet" href="/styles/main.css">
+  </head>
+  <body>
+    <nav class="navBar">
+      <ul id="character-list">
+        <li><a ui-sref="character({ name: 'Punisher'})">Punisher</a></li>
+        <li><a ui-sref="character({ name: 'Juggernaut'})">Juggernaut</a></li>
+        <li><a ui-sref="character({ name: 'Wolverine'})">Wolverine</a></li>
+        <li><a ui-sref="character({ name: 'Iron Man'})">Iron Man</a></li>
+        <li><a ui-sref="character({ name: 'Magneto'})">Magneto</a></li>
+        </ul>
+      </nav>
+
+    <div ui-view></div>
+
+    <script src="/js/app.js" charset="utf-8"></script>
+  </body>
+</html>
