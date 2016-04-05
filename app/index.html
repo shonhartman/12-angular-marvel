@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html ng-app="app">
   <head>
     <meta charset="utf-8">
@@ -8,18 +8,17 @@
   <body>
 
     <nav class="navBar">
-      <ul id="character-nav">
-        <li><a ui-sref="character({ name: 'Wolverine' })"</a></li>
-        <li><a ui-sref="character({ name: 'Punisher' })"</a></li>
-        <li><a ui-sref="character({ name: 'Juggernaut' })"</a></li>
-        <li><a ui-sref="character({ name: 'Iron-Man' })"</a></li>
-        <li><a ui-sref="character({ name: 'Magneto' })"</a></li>
-      </ul>
-    </nav>
+      <ul>
+        <li><a ui-sref="character({ name: 'Punisher'})">Punisher</a></li>
+        <li><a ui-sref="character({ name: 'Juggernaut'})">Juggernaut</a></li>
+        <li><a ui-sref="character({ name: 'Wolverine'})">Wolverine</a></li>
+        <li><a ui-sref="character({ name: 'Iron Man'})">Iron Man</a></li>
+        <li><a ui-sref="character({ name: 'Magneto'})">Magneto</a></li>
+        </ul>
+      </nav>
 
     <div ui-view></div>
 
     <script src="/js/app.js" charset="utf-8"></script>
-
   </body>
 </html>
