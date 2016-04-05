@@ -6,15 +6,17 @@
     <link rel="stylesheet" href="/styles/main.css">
   </head>
   <body>
-    <nav class="navBar">
-      <ul id="character-list">
-        <li><a ui-sref="character({ name: 'Punisher'})">Punisher</a></li>
-        <li><a ui-sref="character({ name: 'Juggernaut'})">Juggernaut</a></li>
-        <li><a ui-sref="character({ name: 'Wolverine'})">Wolverine</a></li>
-        <li><a ui-sref="character({ name: 'Iron Man'})">Iron Man</a></li>
-        <li><a ui-sref="character({ name: 'Magneto'})">Magneto</a></li>
+    <div class="container">
+      <nav class="navBar">
+        <ul id="character-list">
+          <li><a ui-sref="character({ name: 'Punisher'})">Punisher</a></li>
+          <li><a ui-sref="character({ name: 'Juggernaut'})">Juggernaut</a></li>
+          <li><a ui-sref="character({ name: 'Wolverine'})">Wolverine</a></li>
+          <li><a ui-sref="character({ name: 'Iron Man'})">Iron Man</a></li>
+          <li><a ui-sref="character({ name: 'Magneto'})">Magneto</a></li>
         </ul>
       </nav>
+    </div>
 
     <div ui-view></div>
 
