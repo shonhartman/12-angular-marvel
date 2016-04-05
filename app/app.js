@@ -26,15 +26,19 @@ var App = angular.module('app', ['ui.router']);
 */
 
 function config($stateProvider, $urlRouterProvider) {
+	$stateProvider
+		.state('character', {
+			url: '/characters/:name',
+			controller: "CharacterController as characterCtrl",
+			template: require('./views/character.html')
+
+		});
+
+	$urlRouterProvider.otherwise('/characters/Captain America');
 }
 
-$stateProvider
-	.state('character', {
-		url: '/characters/:name',
-		controller: "CharacterController as characterCtrl",
-		template: require('./views/character.html')
 
-	});
+
 
 App.config(config);
 
@@ -87,6 +91,21 @@ App.config(config);
 class CharacterController {
 
 	constructor($scope, $stateParams) {
+		this.name = $stateParams.name;
+		this.description = $stateParams.description;
+		this.image = $stateParams.image;
+		this.getData();
+	}
+
+	getData() {
+		fetch(`http://gateway.marvel.com:80/v1/public/characters?name=Captain%20America&apikey=2a4fd1138bd131ee49b25af36d5f763a`)
+			.then((response) => {
+				return response.json();
+			})
+			.then((response) => {
+				console.log(response);
+			});
+
 	}
 
 }
