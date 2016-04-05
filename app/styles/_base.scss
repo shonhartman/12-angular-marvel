@@ -1,3 +1,19 @@
 * {
   font-family: arial;
 }
+
+img {
+  width: 500px;
+  height: 500px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  max-width: 500px;
+  text-align: center;
+}
