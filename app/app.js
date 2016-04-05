@@ -89,25 +89,28 @@ App.config(config);
 */
 
 class CharacterController {
-
-	constructor($scope, $stateParams) {
+	constructor($stateParams, $scope) {
 		this.name = $stateParams.name;
-		this.description = $stateParams.description;
-		this.image = $stateParams.image;
+		this.$scope = $scope;
 		this.getData();
 	}
 
 	getData() {
-		fetch(`http://gateway.marvel.com:80/v1/public/characters?name=Captain%20America&apikey=2a4fd1138bd131ee49b25af36d5f763a`)
-			.then((response) => {
-				return response.json();
-			})
-			.then((response) => {
-				console.log(response);
-			});
+			fetch(`http://gateway.marvel.com:80/v1/public/characters?name=${this.name}&apikey=1c51377e8242564595ee97800ae287c7`)
+		    .then((response) => {
+		      return response.json();
+		    })
 
-	}
+				.then((response) => {
+					console.log(response);
+
+					this.id = response.data.results[0].id;
+					this.description = response.data.results[0].description;
+					this.image = `${response.data.results[0].thumbnail.path}.${response.data.results[0].thumbnail.extension}`;
+
+		      this.$scope.$digest();
+		     });
+		  }
 
 }
-
 App.controller('CharacterController', CharacterController);
